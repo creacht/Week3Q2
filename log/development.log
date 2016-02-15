@@ -377,3 +377,35 @@ Processing by UsersController#index as HTML
   [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
   Rendered users/index.html.erb within layouts/application (13.5ms)
 Completed 200 OK in 334ms (Views: 302.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for 83.141.77.130 at 2016-02-15 20:50:24 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 322ms (Views: 280.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/blogs" for 83.141.77.130 at 2016-02-15 20:50:30 +0000
+Processing by BlogsController#index as HTML
+  [1m[36mBlog Load (0.3ms)[0m  [1mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 84ms (Views: 73.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/blogs/new" for 83.141.77.130 at 2016-02-15 20:50:33 +0000
+Processing by BlogsController#new as HTML
+  Rendered blogs/_form.html.erb (54.2ms)
+  Rendered blogs/new.html.erb within layouts/application (63.3ms)
+Completed 200 OK in 106ms (Views: 104.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/blogs" for 83.141.77.130 at 2016-02-15 20:51:26 +0000
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wEGmjHrxwiiVZjOhA4+KBzRlM1Qq//LLkBRziAe6OxPseo+QSmFXdbf4oCl4W1o9+fpuCtpWLn0r2mzVN989PA==", "blog"=>{"content"=>"The", "user_id"=>"1"}, "commit"=>"Create Blog"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  Rendered blogs/_form.html.erb (23.5ms)
+  Rendered blogs/new.html.erb within layouts/application (28.2ms)
+Completed 200 OK in 89ms (Views: 82.0ms | ActiveRecord: 0.2ms)
